@@ -27,6 +27,13 @@
             android:id="@+id/akarinSwitch"
             android:text="Explicit Camera"
             android:onClick="explicit"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/akarinMail"
+            android:text="Akarin Mail"
+            android:onClick="sendMail"/>
     </LinearLayout>
 
 </LinearLayout>

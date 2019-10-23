@@ -57,4 +57,9 @@ class MainActivity : AppCompatActivity() {
         val cameraExplicit : Intent = Intent(this@MainActivity, CaptureAkarin::class.java)
         startActivity(cameraExplicit)
     }
+
+    fun sendMail(view: View) {
+        val mail = Intent(this@MainActivity, AkarinMail::class.java)
+        startActivity(mail)
+    }
 }

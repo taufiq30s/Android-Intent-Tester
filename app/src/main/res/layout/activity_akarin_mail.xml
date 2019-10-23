@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AkarinMail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:id="@+id/tvFrom"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:text="From"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressFrom"
+                android:layout_toEndOf="@+id/tvFrom"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:id="@+id/tvDest"
+                android:layout_alignParentTop="true"
+                android:text="To"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressDest"
+                android:layout_toEndOf="@+id/tvDest"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:id="@+id/tvSubj"
+                android:layout_alignParentTop="true"
+                android:text="Subject"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/subject"
+                android:layout_toEndOf="@+id/tvSubj"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/compose"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:hint="Compose Email"
+            android:textSize="14dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:background="@null"/>
+    </LinearLayout>
+
+</ScrollView>
