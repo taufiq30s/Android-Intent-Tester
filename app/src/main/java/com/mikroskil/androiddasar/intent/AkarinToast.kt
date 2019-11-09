@@ -30,7 +30,7 @@ class AkarinToast : AppCompatActivity() {
             "Hello " + findViewById<EditText>(R.id.pesan).text // Set Message
         val toast = Toast(this) // Initialize Toast
         toast.duration = Toast.LENGTH_LONG // Set Duration
-        toast.setGravity(Gravity.BOTTOM, 0, 200)
+        toast.setGravity(Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 300)
         toast.view = layout // Set Toast Layout
         toast.show() // Show Toast
 

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android Intent Tester.iml" filepath="$PROJECT_DIR$/Android Intent Tester.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidIntentTester.iml" filepath="$PROJECT_DIR$/AndroidIntentTester.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-Android Intent Tester.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-Android Intent Tester.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IntentImplicit.iml" filepath="$PROJECT_DIR$/IntentImplicit.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mtaufiq-AndroidStudioProjects-Android Intent Tester.iml" filepath="$PROJECT_DIR$/mtaufiq-AndroidStudioProjects-Android Intent Tester.iml" />
     </modules>
   </component>
 </project>
