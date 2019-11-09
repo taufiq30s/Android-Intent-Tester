@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AkarinMail"></activity>
+        <activity
+            android:name=".AkarinToast"
+            android:label="Akarin Toast"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".AkarinMail" />
         <activity
             android:name=".CaptureAkarin"
             android:label="Capture Akarin~!" />

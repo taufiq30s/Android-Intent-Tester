@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='Android Intent Tester'
+rootProject.name='AndroidIntentTester'

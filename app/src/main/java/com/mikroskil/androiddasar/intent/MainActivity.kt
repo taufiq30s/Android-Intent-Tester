@@ -1,19 +1,14 @@
 package com.mikroskil.androiddasar.intent
 
-import android.Manifest
 import android.Manifest.permission.CAMERA
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Environment
 import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import java.io.File
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,7 +39,11 @@ class MainActivity : AppCompatActivity() {
     ) {
         if(requestCode == 200){
             if(grantResults[0] == PackageManager.PERMISSION_DENIED){
-                Toast.makeText(this@MainActivity, "Sorry!!!, you can't use this app without granting permission", Toast.LENGTH_LONG).show();
+                Toast.makeText(
+                    this@MainActivity,
+                    "Sorry!!!, you can't use this app without granting permission",
+                    Toast.LENGTH_LONG
+                ).show()
             }
             else{
                 var cameraIntent : Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -61,5 +60,10 @@ class MainActivity : AppCompatActivity() {
     fun sendMail(view: View) {
         val mail = Intent(this@MainActivity, AkarinMail::class.java)
         startActivity(mail)
+    }
+
+    fun startToastActivity(view: View) {
+        val toast = Intent(this@MainActivity, AkarinToast::class.java)
+        startActivity(toast)
     }
 }
