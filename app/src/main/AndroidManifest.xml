@@ -14,10 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AkarinToDo"
+            android:label="To-Do Remember"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AkarinToast"
             android:label="Akarin Toast"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".AkarinMail" />
         <activity
             android:name=".CaptureAkarin"

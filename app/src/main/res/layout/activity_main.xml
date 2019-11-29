@@ -40,6 +40,13 @@
             android:layout_height="wrap_content"
             android:onClick="startToastActivity"
             android:text="Akarin Toast" />
+
+        <Button
+            android:id="@+id/akarinToDo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="startTodoActivity"
+            android:text="To-Do Remember" />
     </LinearLayout>
 
 </LinearLayout>

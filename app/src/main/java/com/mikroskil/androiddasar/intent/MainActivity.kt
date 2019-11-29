@@ -66,4 +66,9 @@ class MainActivity : AppCompatActivity() {
         val toast = Intent(this@MainActivity, AkarinToast::class.java)
         startActivity(toast)
     }
+
+    fun startTodoActivity(view: View) {
+        val remember = Intent(this@MainActivity, AkarinToDo::class.java)
+        startActivity(remember)
+    }
 }
