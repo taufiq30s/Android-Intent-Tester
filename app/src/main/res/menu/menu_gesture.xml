@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/showPress"
+    android:title="Show Press Trigger"/>
+  <item android:id="@+id/singleTapUp"
+    android:title="Single Tap Up Trigger"/>
+  <item android:id="@+id/down"
+    android:title="Down Trigger"/>
+  <item android:id="@+id/fling"
+    android:title="Fling Trigger"/>
+  <item android:id="@+id/scroll"
+    android:title="Scroll Triger"/>
+  <item android:id="@+id/longPress"
+    android:title="Long Press Trigger"/>
+  <item android:id="@+id/doubleTap"
+    android:title="Double Tap Trigger"/>
+  <item android:id="@+id/doubleTapEvent"
+    android:title="Double Tap Event Trigger"/>
+  <item android:id="@+id/singleTapConfirmed"
+    android:title="Single Tap Confirmed Trigger"/>
+</menu>

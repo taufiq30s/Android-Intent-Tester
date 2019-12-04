@@ -47,6 +47,13 @@
             android:layout_height="wrap_content"
             android:onClick="startTodoActivity"
             android:text="To-Do Remember" />
+
+        <Button
+          android:id="@+id/akarinGesture"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:onClick="startAkarinGesture"
+          android:text="Akarin Gesture Detection" />
     </LinearLayout>
 
 </LinearLayout>

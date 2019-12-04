@@ -71,4 +71,9 @@ class MainActivity : AppCompatActivity() {
         val remember = Intent(this@MainActivity, AkarinToDo::class.java)
         startActivity(remember)
     }
+
+    fun startAkarinGesture(view: View) {
+        val gesture = Intent(this@MainActivity, AkarinGestureDetecion::class.java)
+        startActivity(gesture)
+    }
 }

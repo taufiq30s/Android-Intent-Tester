@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.mikroskil.androiddasar.intent.AkarinGestureDetecion">
+
+  <RelativeLayout
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+      android:id="@+id/touchArea"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_vertical"
+      android:orientation="vertical">
+
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/akariGesture"
+        android:visibility="gone"
+        android:src="@drawable/hide_akarin_special" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="Touch Me!"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_alignParentBottom="true"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginBottom="10dp"
+      android:paddingHorizontal="8dp"
+      android:paddingVertical="3dp"
+      android:id="@+id/statusBar"
+      android:background="@drawable/border_linearlayout">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/triggerStatusCaption"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="Trigger : " />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/triggerStatus"
+        android:textSize="20sp"
+        android:text="False"
+        android:layout_toEndOf="@id/triggerStatusCaption"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xPositionCaption"
+        android:textSize="20sp"
+        android:layout_below="@+id/triggerStatusCaption"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:text="X: "/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xPosition"
+        android:textSize="20sp"
+        android:text="0"
+        android:layout_below="@+id/triggerStatusCaption"
+        android:layout_toEndOf="@id/xPositionCaption"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yPositionCaption"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/xPosition"
+        android:layout_below="@+id/triggerStatusCaption"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="25dp"
+        android:visibility="gone"
+        android:text="Y : "/>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yPosition"
+        android:textSize="20sp"
+        android:text="0"
+        android:layout_below="@+id/triggerStatusCaption"
+        android:layout_toEndOf="@id/yPositionCaption"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+
+    </RelativeLayout>
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_anchor="@+id/relativeLayout"
+    app:layout_anchorGravity="top|center">
+
+    <TextView
+      android:id="@+id/triggerCaption"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="Gesture Trigger : "
+       />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/triggerCaption"
+      android:id="@+id/trigger"/>
+  </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

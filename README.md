@@ -8,13 +8,14 @@ Direktori Source Code
 
 > [app](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app)/[src](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src)/[main](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main)/[java](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main/java)/[com](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main/java/com)/[mikroskil](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main/java/com/mikroskil)/[androiddasar](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main/java/com/mikroskil/androiddasar)/**intent**/
 
-| Nama Fitur      | Nama File        | Deskripsi                                                    |
-| :-------------- | ---------------- | ------------------------------------------------------------ |
-| Implicit Camera | MainActivity.kt  | Menjalankan fitur kamera secara implisit.                    |
-| Explicit Camera | CaptureAkarin.kt | Menjalankan fitur kamera secara eksplisit menggunakan API Camera2. |
-| Akarin Mail     | AkarinMail.kt    | Menjalankan activity dimana pengguna bisa mengetikkan pesan, kemudian pesan tersebut akan di kirim ke email client yang tersedia di Android OS. |
-| Akarin Toast    | AkarinToast.kt   | Menampilkan sebuah Toast dimana isi pesan bisa diinput user melalui form yang tersedia. |
-| To-Do Remember  | AkarinToDo.kt    | Menjalankan sebuah activity dimana ada custom dialog ketika ingin menambah to-do baru. |
+| Nama Fitur              | Nama File                 | Deskripsi                                                    |
+| :---------------------- | ------------------------- | ------------------------------------------------------------ |
+| Implicit Camera         | MainActivity.kt           | Menjalankan fitur kamera secara implisit.                    |
+| Explicit Camera         | CaptureAkarin.kt          | Menjalankan fitur kamera secara eksplisit menggunakan API Camera2. |
+| Akarin Mail             | AkarinMail.kt             | Menjalankan activity dimana pengguna bisa mengetikkan pesan, kemudian pesan tersebut akan di kirim ke email client yang tersedia di Android OS. |
+| Akarin Toast            | AkarinToast.kt            | Menampilkan sebuah Toast dimana isi pesan bisa diinput user melalui form yang tersedia. |
+| To-Do Remember          | AkarinToDo.kt             | Menjalankan sebuah activity dimana ada custom dialog ketika ingin menambah to-do baru. |
+| Akarin Gesture Detector | AkarinGestureDetection.kt | Menjalankan sebuah activity dimana pengguna bisa melakukan uji coba dari tiap common gestures yang tersedia di kelas GestureDetector.<br />[For more info about Common Gestures on Android, Click Here](https://developer.android.com/training/gestures/detector). |
 
 
 
@@ -24,13 +25,14 @@ Direktori Source Code Layout
 
 > /[app](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app)/[src](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src)/[main](https://github.com/taufiq30s/Android-Intent-Tester/tree/master/app/src/main)/**res**/
 
-| Fitur           | Lokasi Layout Terkait                                        |
-| --------------- | ------------------------------------------------------------ |
-| MainActivity    | layout/activity_main.xml                                     |
-| Explicit Camera | layout/activity_capture_akarin.xml                           |
-| Akarin Mail     | layout/activity_akarin_mail.xml<br />menu/menu_mail.xml (Memberikan opsi pada Action Bar) |
-| Akarin Toast    | layout/activity_akarin_toast.xml<br />layout/akarin_toast.xml (Custom toast layout)<br />drawable-v24/hello.png (Image for custom toast)<br />drawable/curve_side_linearlayout.xml (Efek *curve* pada custom toast) |
-| To-Do Remember  | layout/activity_akarin_to_do.xml<br />layout/custom_dialog_remember.xml<br/>drawable-hdpi/hidden.jpg |
+| Fitur                   | Lokasi Layout Terkait                                        |
+| ----------------------- | ------------------------------------------------------------ |
+| MainActivity            | layout/activity_main.xml                                     |
+| Explicit Camera         | layout/activity_capture_akarin.xml                           |
+| Akarin Mail             | layout/activity_akarin_mail.xml<br />menu/menu_mail.xml (Memberikan opsi pada Action Bar) |
+| Akarin Toast            | layout/activity_akarin_toast.xml<br />layout/akarin_toast.xml (Custom toast layout)<br />drawable-v24/hello.png (Image for custom toast)<br />drawable/curve_side_linearlayout.xml (Efek *curve* pada custom toast) |
+| To-Do Remember          | layout/activity_akarin_to_do.xml<br />layout/custom_dialog_remember.xml<br/>drawable-hdpi/hidden.jpg |
+| Akarin Gesture Detector | layout/activity_akarin_gesture_detection.xml<br />drawable/border_linear_layout.xml<br />drawable-mdpi/hide_akarin_special.jpg<br />drawable-mdi/peace_akarin.png<br />menu/menu_gesture.xml |
 
 ## Akarin
 
