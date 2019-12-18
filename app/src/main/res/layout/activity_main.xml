@@ -54,6 +54,13 @@
           android:layout_height="wrap_content"
           android:onClick="startAkarinGesture"
           android:text="Akarin Gesture Detection" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="startContact"
+            android:text="My Contact" />
     </LinearLayout>
 
 </LinearLayout>

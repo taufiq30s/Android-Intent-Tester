@@ -76,4 +76,9 @@ class MainActivity : AppCompatActivity() {
         val gesture = Intent(this@MainActivity, AkarinGestureDetecion::class.java)
         startActivity(gesture)
     }
+
+    fun startContact(view: View) {
+        val contact = Intent(this@MainActivity, Contact::class.java)
+        startActivity(contact)
+    }
 }

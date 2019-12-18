@@ -1,14 +1,14 @@
 <resources>
-  <string name="app_name">Hello Akarin!</string>
-  <string name="title_activity_capture">Capture Akarin</string>
-  <string name="falseCondition">False</string>
-  <string name="trueCondition">True</string>
-  <string-array name="repeat_condition">
-    <item>Only once</item>
-    <item>Daily</item>
-    <item>Weekday</item>
-    <item>Weekend</item>
-    <item>Monthly</item>
-    <item>Yearly</item>
-  </string-array>
+    <string name="app_name">Hello Akarin!</string>
+    <string name="title_activity_capture">Capture Akarin</string>
+    <string name="falseCondition">False</string>
+    <string name="trueCondition">True</string>
+    <string-array name="repeat_condition">
+        <item>Only once</item>
+        <item>Daily</item>
+        <item>Weekday</item>
+        <item>Weekend</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
 </resources>
