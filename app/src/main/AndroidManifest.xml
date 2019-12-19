@@ -14,7 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Contact"></activity>
+        <activity
+            android:name=".Contact_Add"
+            android:label="Add Contact"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Contact"/>
+        <activity
+            android:name=".Contact"
+            android:label="Contact"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AkarinGestureDetecion"
             android:label="Akarin Gesture Detector"
