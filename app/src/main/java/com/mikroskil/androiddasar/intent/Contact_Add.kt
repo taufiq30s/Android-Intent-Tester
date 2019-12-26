@@ -3,7 +3,9 @@ package com.mikroskil.androiddasar.intent
 import android.Manifest
 import android.app.ActionBar
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
@@ -23,6 +25,7 @@ import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toolbar
 import com.bumptech.glide.util.Util
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.mikroskil.androiddasar.intent.model.contactsData
 import kotlinx.android.synthetic.main.activity_contact_add.*
 import java.io.File
@@ -33,9 +36,10 @@ import java.net.URI
 class Contact_Add : AppCompatActivity() {
 
     // Declare Data
-    var image: String = ""
     var image2 : Uri? = null
     var contactData = arrayListOf<String>()
+    lateinit var confirmBuilder : MaterialAlertDialogBuilder
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +55,18 @@ class Contact_Add : AppCompatActivity() {
             toolbarText.text = title
             setSupportActionBar(toolbar);
         }
+
+        // Alert
+        confirmBuilder = MaterialAlertDialogBuilder(this, R.style.Theme_MaterialComponents_Dialog_Alert)
+        confirmBuilder.setMessage("Discard your changes?")
+            .setTitle("Cancel")
+            .setPositiveButton("OK",DialogInterface.OnClickListener {
+                    DialogInterface, i -> finish()
+            })
+            .setNegativeButton("Cancel", DialogInterface.OnClickListener{
+                    DialogInterface, i -> DialogInterface.dismiss()
+            })
+
 
         //Untuk Ganti Profil ( Ambil dari Galeri )
         profil.setOnClickListener{
@@ -73,6 +89,7 @@ class Contact_Add : AppCompatActivity() {
         }
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_add_contact, menu)
         return super.onCreateOptionsMenu(menu)
@@ -80,6 +97,16 @@ class Contact_Add : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.saveContact) saveContact()
+        else if(item.itemId == android.R.id.home){
+            if(findViewById<EditText>(R.id.contactName).text.toString() != "" ||
+                findViewById<EditText>(R.id.contactPhone).text.toString() != "" || image2 != null){
+                val confirm = confirmBuilder.create()
+                confirm.show()
+                return true
+            }
+            else finish()
+
+        }
         return super.onOptionsItemSelected(item)
     }
 
@@ -140,11 +167,14 @@ class Contact_Add : AppCompatActivity() {
     //Akses Galeri ( End )
 
     fun saveContact(){
-        contactData.add(findViewById<EditText>(R.id.contactName).text.toString())
-        contactData.add(findViewById<EditText>(R.id.contactPhone).text.toString())
+        if(findViewById<EditText>(R.id.contactName).text.toString() != "" &&
+            findViewById<EditText>(R.id.contactPhone).text.toString() != "") {
+            contactData.add(findViewById<EditText>(R.id.contactName).text.toString())
+            contactData.add(findViewById<EditText>(R.id.contactPhone).text.toString())
 //        val nameFile = contactData[0]+"_"+contactData[1]
-        // Save image to app data
-        contactData.add(image2.toString())
+            // Save image to app data
+            contactData.add(image2.toString())
+        }
 //        saveImage(this.applicationContext,convertToBitmap(this.applicationContext,
 //            image2?: Uri.parse("")),nameFile,"png")
 //        contactData.add(nameFile)
@@ -176,7 +206,8 @@ class Contact_Add : AppCompatActivity() {
 
     override fun finish() {
         var returnIntent = Intent()
-        returnIntent.putExtra("contactData", contactData)
+        if(contactData.size == 3)
+            returnIntent.putExtra("contactData", contactData)
         setResult(Activity.RESULT_OK, returnIntent)
         super.finish()
     }

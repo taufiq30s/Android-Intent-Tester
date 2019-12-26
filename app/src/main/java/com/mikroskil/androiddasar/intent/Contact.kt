@@ -52,8 +52,10 @@ class Contact : AppCompatActivity() {
                 dataList = contact(item[0],
                     item[1], Uri.parse(item[2]))
                 val list : ArrayList<contact> = arrayListOf(dataList)
-                contact_list.addAll(contact_list.size,list)
-                contactsData.listData = contact_list
+                contact_list.addAll(list)
+                contactsData.listData = (contact_list)
+                list.clear()
+                contact_list.clear()
             }
 
         }
